@@ -4,11 +4,11 @@ const mongoose = require("mongoose")
 const bcrypt = require("bcryptjs")
 
 //recebendo model de usuários
-require("../../estudos_docker/modules/usuarios")
+require("/estudos_docker/modules/usuarios")
 const Usuarios = mongoose.model("usuarios")
 
 //recebendo model de postagens
-require("../../estudos_docker/modules/postagem")
+require("/estudos_docker/modules/postagem")
 const Postagens = mongoose.model("postagens")
 
 //rota principal após login como usuário
@@ -91,7 +91,7 @@ router.post("/cadastro", (req, res)=>{
 })
 
 //rota para login
-require("../../estudos_docker/config/auth")
+require("/estudos_docker/config/auth")
 const passport = require("passport")
 
 router.get("/logout", (req, res)=>{

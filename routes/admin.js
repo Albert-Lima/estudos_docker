@@ -9,11 +9,11 @@ const mongoose = require('mongoose')
 const {eAdmin} = require("../helpers/eAdmin")
 
 //RECEBENDO MODEL DE CATEGORIA:
-require('../../estudos_docker/modules/categorias')
+require('/estudos_docker/modules/categorias')
 const Categoria = mongoose.model('categorias')
 
 //RECEBENDO O MODEL DE POSTAGENS:
-require('../../estudos_docker/modules/postagem')
+require('/estudos_docker/modules/postagem')
 const Postagens = mongoose.model('postagens')
 
 
