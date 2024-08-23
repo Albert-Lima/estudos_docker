@@ -1,0 +1,29 @@
+{{>_navbaradmin}}
+{{#each erros}}
+    <div class="ErrorMSG">{{texto}}</div>
+{{else}}
+{{/each}}
+<div class="BoxNewPost">
+    <h4>nova postagem:</h4>
+    <form action="/admin/postagens/edit" method="post">
+        <input type="hidden" name="id" value="{{postagens._id}}">
+        <label for="titulo" class="labelFor">titulo:</label>
+        <input type="text" name="titulo" value="{{postagens.titulo}}">
+        <label for="slug" class="labelFor">slug:</label>
+        <input type="text" name="slug" value="{{postagens.slug}}">
+        <label for="descricao" class="labelFor">descrição:</label>
+        <input type="text" name="descricao" value="{{postagens.descricao}}">
+        <label for="conteudo" class>conteúdo:</label>
+        <textarea name="conteudo" id="" cols="30" rows="10">{{postagens.conteudo}}</textarea>
+        <label for="categoria">categoria:</label>
+        <select name="categoria" id="">
+            {{#each categorias}}
+                <option value="{{_id}}">{{nomeCategoria}}</option>
+            {{else}}
+                <option value="0">nenhuma categoria registrada</option>
+            {{/each}}
+        </select>
+        <button type="submit">Editar postagem</button>
+    </form>
+</div>
+{{>_footer}}

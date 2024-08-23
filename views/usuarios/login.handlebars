@@ -1,0 +1,43 @@
+{{>_navbarglobal}}
+<section class="BoxLogo" style="margin-top: 100px;">
+    <div class="Logo">EcoMercado <br> Global</div>
+    <div class="linhaVerticalLogo"></div>
+    <div class="LogoMarca">
+        “Conectando você ao pulsar do mundo financeiro”
+        <a href="/user/cadastro" class="buttonCadastre">Cadastre-se</a>
+    </div>
+</section>
+<!-- mensagens de erro aparecerão aqui -->
+{{#if error}}
+    <div class="ErrorMSG">
+        {{error}}
+    </div>
+{{else}}
+{{/if}}
+{{>_msg}}
+{{#each erros}}
+    <div class="ErrorMSG">
+        {{texto}}
+    </div>
+{{else}}
+{{/each}}
+
+
+<section class="section-form" style="margin-top: 50px;">
+    <form method="post" action="/user/login" class="form-cad">
+        <div class="box-input">
+            <div class="box-icon">
+                <img src="/css/img/icons8-nova-mensagem-100.png" alt="icone de email">
+            </div>
+            <input type="email" name="email" required class="input-form" placeholder="email">
+        </div>
+        <div class="box-input">
+            <div class="box-icon">
+                <img src="/css/img/icons8-senha-100.png" alt="icone de senha">
+            </div>
+            <input type="password" name="senha" required class="input-form" placeholder="senha">
+        </div>
+
+        <button type="submit" class="button-form">login</button>
+    </form>
+</section>

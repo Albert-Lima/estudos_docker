@@ -1,0 +1,31 @@
+<header class="BarNav">
+    <div class="menu">
+        <button class="bttMenu">
+            <span class="barra-menu" id="barra1"></span>
+            <span class="barra-menu" id="barra2"></span>
+            <span class="barra-menu" id="barra3"></span>
+        </button>
+        <nav class="NavPage1">
+            <a href="/user/home" class="NoSelected">Home</a>
+            <a href="/user/postagem" class="NoSelected">Postagens</a>
+            <a href="#" class="NoSelected">Calculadora</a>
+            <a href="/user/logout" class="NoSelected">Logout</a>
+        </nav>
+    </div>
+    <nav class="NavSocial">
+        <a href="#" class="iconSocial"><img src="/css/img/btt-instagram.png" alt=""></a>
+        <a href="#" class="iconSocial"><img src="/css/img/icon_facebook.png" alt=""></a>
+        <a href="#" class="iconSocial"><img src="/css/img/twitter.png" alt=""></a>
+    </nav>
+</header>
+
+<section class="BoxNotícias" style="margin-top: 100px;">
+    <div class="ImgPost" style="background-image: url('/{{postagens.imagem}}');"></div>
+    <div class="PostInfo">
+        <h3>{{postagens.titulo}}</h3>
+        <p>{{postagens.descricao}}</p>
+    </div>
+</section>
+<div class="box-container-conteudo">
+    <p>{{postagens.conteudo}}</p>
+</div>

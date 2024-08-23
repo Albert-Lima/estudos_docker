@@ -1,0 +1,14 @@
+{{>_navbaradmin}}
+{{>_msg}}
+{{#each erros}}
+    <div class="ErrorMSG">{{texto}}</div>
+{{else}}
+{{/each}}
+<form action="/admin/categorias/nova" method="post" class="formCategoria">
+    <label for="nomeCategoria" class="labelFor">Nome da categoria:</label>
+    <input type="text" name="nomeCategoria" id="" class="input">
+    <label for="slugCategoria" class="labelFor">Slug:</label>
+    <input type="text" name="slugCategoria" id="" class="input">
+    <button type="submit" class="buttonSubmit">Criar categoria</button>
+</form>
+{{>_footer}}

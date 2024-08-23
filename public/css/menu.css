@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --cor-DarkBase: #000000;
+    --cor-LightLetters: #FFFFFF;
+    --cor-DarkTitle: #808080;
+    --cor-DarkParag: #575757;
+    --cor-SoftBase: #D9D9D9;
+    --cor-UltraSoftBase: #F2F2F2;
+    --cor-BlueMedium: #000042;
+    --cor-BlueLight: #000063;
+    --fontBase: "Roboto", sans-serif;
+}
+.BarNav{
+    background-color: var(--cor-DarkBase);
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: row;
+    align-items: center;
+    height: 71px;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: calc(100% - 100px);
+}
+.menu{
+    background-color: #000016;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 20000;
+}
+.menu2{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.bttMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 25px;
+    right: 20px;
+    gap: 5px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer
+}
+.barra-menu{
+    background-color: white;
+    border-radius: 4px;
+    width: 30px;
+    height: 3px;
+}
+.NavPage1{
+    display: none;
+}
+.NavPage2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.NoSelected{
+    color: var(--cor-LightLetters);
+    text-decoration: none;
+    font-family: var(--fontBase);
+    font-weight: 600;
+    font-size: 11pt;
+}
+.NoSelected:hover{
+    transition: 0.2s;
+    color: var(--cor-DarkTitle)
+}
+.NavSocial{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.iconSocial img{
+    height: 20px;
+}

@@ -1,0 +1,33 @@
+{{>_navbarglobal}}
+<div class="BolsaBox">valores da bolsa aparecerão aqui.</div>
+<section class="BoxLogo">
+    <div class="Logo">EcoMercado <br> Global</div>
+    <div class="linhaVerticalLogo"></div>
+    <div class="LogoMarca">
+        “Conectando você ao pulsar do mundo financeiro”
+        <a href="/user/cadastro" class="buttonCadastre">Cadastre-se</a>
+    </div>
+</section>
+<h2 class="Title">Notícias</h2>
+{{#if error}}
+    <div class="ErrorMSG">
+        {{error}}
+    </div>
+{{else}}
+{{/if}}
+{{>_msg}}
+{{#each postagens}}
+    <section class="BoxNotícias">
+        <div class="ImgPost" style="background-image: url('{{imagem}}');"></div>
+        <div class="PostInfo">
+            <h3>{{titulo}}</h3>
+            <p>{{descricao}}</p>
+        </div>
+        <div class="ButtonBox">
+            <a href="/user/cadastre-se" class="LinkPostagens"><button class="Button-see-more">ver mais</button></a>
+        </div>
+    </section>
+{{else}}
+    <h4 style="margin-top: 100px;" class="ErrorMSG">nenhuma postagem ainda</h4>
+{{/each}}
+{{>_footer}}

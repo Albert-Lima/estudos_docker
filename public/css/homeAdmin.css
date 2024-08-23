@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --cor-DarkBase: #000000;
+    --cor-LightLetters: #FFFFFF;
+    --cor-DarkTitle: #808080;
+    --cor-DarkParag: #575757;
+    --cor-SoftBase: #D9D9D9;
+    --cor-UltraSoftBase: #F2F2F2;
+    --cor-BlueMedium: #000042;
+    --cor-BlueLight: #000063;
+    --fontBase: "Roboto", sans-serif;
+}

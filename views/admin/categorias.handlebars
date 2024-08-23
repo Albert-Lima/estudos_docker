@@ -1,0 +1,20 @@
+{{>_navbaradmin}}
+<div class="BoxListCat">
+    <h1 class="TitleGray">Categorias registradas:</h1>
+    <hr>
+    <a href="/admin/categorias/nova"><button class="buttonSubmit">Nova categoria</button></a>
+    {{#each Categoria}}
+        <div class="boxCategorias">
+            <h4>{{nomeCategoria}}</h4>
+            <small>{{slugCategoria}}</small>
+            <a href="/admin/categorias/edit/{{_id}}"><button class="buttonSubmit">editar categoria</button></a>
+            <form action="/admin/categorias/deletar" method="post" class="BoxButton-Posts">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="buttonDelete">Deletar categoria</button>
+            </form>
+        </div>
+    {{else}}
+        <h4>Nenhuma categoria registrada</h4>
+    {{/each}}
+</div>
+{{>_footer}}

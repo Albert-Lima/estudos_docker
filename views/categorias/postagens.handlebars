@@ -1,0 +1,13 @@
+<div class="BoxListPost">
+    <h1 class="TitleGray">postagens:</h1>
+    <hr>
+</div>
+{{#each postagens}}
+    <div class="boxPostagens">
+        <h2>{{titulo}}</h2>
+        <small>{{data}}</small>
+        <p>{{conteudo}}</p>
+    </div>
+{{else}}
+    <p>nenhuma postagem ainda</p>
+{{/each}}

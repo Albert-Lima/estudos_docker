@@ -1,0 +1,15 @@
+{{>_navbaradmin}}
+{{>_msg}}
+{{#each erros}}
+    <div class="ErrorMSG">{{texto}}</div>
+{{else}}
+{{/each}}
+<form action="/admin/categorias/edit" method="post" class="formCategoria">
+    <input type="hidden" name="id" value="{{categoria._id}}">
+    <label for="nomeCategoria" class="labelFor">novo nome:</label>
+    <input type="text" name="nomeCategoria" id="" class="input" value="{{categoria.nomeCategoria}}">
+    <label for="slugCategoria" class="labelFor">novo slug:</label>
+    <input type="text" name="slugCategoria" id="" class="input" value="{{categoria.slugCategoria}}">
+    <button type="submit" class="buttonSubmit">Editar categoria</button>
+</form>
+{{>_footer}}

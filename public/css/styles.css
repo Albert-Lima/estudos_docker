@@ -1,0 +1,523 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --cor-DarkBase: #000000;
+    --cor-LightLetters: #FFFFFF;
+    --cor-DarkTitle: #808080;
+    --cor-DarkParag:#575757;
+    --cor-SoftBase: #D9D9D9;
+    --cor-UltraSoftBase: #F2F2F2;
+    --cor-BlueMedium: #000042;
+    --cor-BlueLight: #000063;
+    --fontBase: 'Roboto', sans-serif;
+}
+
+/*estilos logoMarca*/
+.TitleGray{
+    color: var(--cor-DarkTitle);
+    text-decoration: none;
+    font-family: var(--fontBase);
+    font-weight: 600;
+    font-size: 11pt;
+    margin-bottom: 10px;
+}
+.BodyApp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    z-index: 1;
+}
+.BolsaBox{
+    height: 40px;
+    width: 80%;
+    background-color: var(--cor-SoftBase);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+    font-family: var(--fontBase);
+    font-weight: 700;
+    font-size: 10pt;
+}
+.BoxLogo{
+    height: 200px;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.Logo{
+    font-family: var(--fontBase);
+    font-size: 30pt;
+    font-weight: 700;
+    color: var(--cor-BlueMedium);
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.linhaVerticalLogo{
+    width: 2px;
+    height: 150px;
+    background-color: black;
+}
+.LogoMarca{
+    font-family: var(--fontBase);
+    font-size: 10pt;
+    font-weight: 800;
+    color: var(--cor-BlueMedium);
+    width: 40%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.buttonCadastre{
+    text-decoration: none;
+    color: white;
+    background-color: var(--cor-BlueMedium);
+    padding: 5px 15px 5px 15px;
+    border-radius: 3px;
+    font-size: 10pt;
+    font-weight: 100;
+}
+
+/*estilos postagens principal*/
+.Title{
+    font-family: var(--fontBase);
+    color: #000063;
+    font-size: 12pt;
+    font-weight: 800;
+    width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.BoxNotícias{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: max-content;
+    height: max-content;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 250px 250px 125px;
+    grid-template-rows: 250px 50px;
+    column-gap: 20px;
+    border-radius: 5px;
+}
+@media (max-width: 720px){
+    .BoxNotícias{
+        width: 95%;
+        grid-template-columns: 30vw 30vw 15vw;
+        grid-template-rows: 30vw 50px;
+    }
+}
+.ImgPost{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.PostInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+.PostInfo h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: var(--cor-DarkBase);
+    font-size: 15pt;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+.PostInfo p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-DarkTitle);
+    font-size: 12pt;
+    font-weight: 500;
+    margin-top: 10px;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+.PostInfo p::-webkit-scrollbar{
+    width: 5px;
+}
+.PostInfo p::-webkit-scrollbar-track{
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.PostInfo p::-webkit-scrollbar-thumb{
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+}
+.ButtonBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    border-bottom: 1px solid black;
+}
+.Button-see-more{
+    background-color: rgb(18, 18, 18);
+    border-radius: 5px;
+    color: white;
+    font-family: var(--fontBase);
+    font-size: 10pt;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 5px 10px 5px 10px;
+}
+.Button-see-more:hover{
+    background-color: black;
+}
+.box-container-conteudo{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    margin-top: -80px;
+    margin-bottom: 100px;
+    max-width: 800px;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+@media (max-width: 820px){
+    .box-container-conteudo{
+        max-width: 90%;
+        font-size: 10pt;
+    }
+    .PostInfo h3{
+        font-size: 12pt;
+    }
+    .PostInfo p{
+        font-size: 10pt;
+    }
+}
+@media (max-width: 600px){
+    .PostInfo h3{
+        font-size: 10pt;
+    }
+}
+/*estilos de formulário*/
+.section-form{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+}
+@media (max-width: 420px){
+    .section-form{
+        width: 90%;
+    }
+}
+.section-form h3{
+    font-family: var(--fontBase);
+}
+.form-cad{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+.box-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    width: 100%;
+}
+.box-icon{
+    background-color: #000042;
+    height: 40px;
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.box-icon img{
+    height: 20px;
+    width: max-content;
+    filter: invert(1);
+}
+.input-form{
+    outline: transparent;
+    border: none;
+    border-bottom: 1px var(--cor-DarkParag) solid;
+    width: 80%;
+    height: 100%;
+    font-family: var(--fontBase);
+}
+.button-form{
+    width: calc(100% - 5%);
+    height: 40px;
+    margin: auto;
+    font-family: var(--fontBase);
+    background-color: var(--cor-BlueMedium);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.button-form:hover{
+    background-color: var(--cor-BlueLight);
+}
+
+
+footer{
+    width: 100%;
+    height: 350px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 50px;
+}
+.Container-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#FormUpdate{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.ContainerRedirect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#container-direitos{
+    margin-top: 20px;
+    width: 100%;
+}
+#Direitos{
+    text-align: center;
+    color: white;
+    margin: auto;
+    font-family: var(--fontBase);
+    font-size: 8pt;
+    font-weight: 500;
+}
+
+.formCategoria{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: max-content;
+    margin: auto;
+}
+.labelFor{
+    margin-top: 15px;
+    font-family: var(--fontBase);
+    font-size: 12pt;
+    font-weight: 600;
+    color: var(--cor-BlueMedium)
+}
+.input{
+    border: 1px solid var(--cor-DarkTitle);
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 300px;
+    font-size: 10pt;
+    font-weight: 500;
+    font-family: var(--fontBase);
+    color: var(--cor-DarkParag);
+}
+.buttonSubmit{
+    background-color: var(--cor-BlueLight);
+    color: white;
+    font-family: var(--fontBase);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.buttonSubmit:hover{
+    background-color: var(--cor-BlueMedium);
+    transition: 0.5s;
+}
+
+.BoxListCat{
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    height: max-content;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.BoxListPost{
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    height: max-content;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.SuccessMSG{
+    width: 500px;
+    height: 40px;
+    font-size: 12pt;
+    font-family: var(--fontBase);
+    color: rgb(0, 62, 0);
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 128, 0, 0.545);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+.ErrorMSG{
+    width: 500px;
+    height: 40px;
+    font-size: 10pt;
+    font-family: var(--fontBase);
+    color: rgb(149, 0, 0);
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 101, 101, 0.545);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+.boxCategorias{
+    height: max-content;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    font-family: var(--fontBase);
+}
+.boxPostagens{
+    height: max-content;
+    width: 500px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    font-family: var(--fontBase);
+}
+.BoxButton-Posts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+.buttonDelete{
+    background-color: var(--cor-DarkBase);
+    color: white;
+    font-family: var(--fontBase);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 0px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+/*responsividade*/
+@media (max-width: 850px){
+    .Title{
+        width: 80%;
+    }
+}
+@media (max-width: 800px){
+    .BoxLogo{
+        width: 300px;
+        margin: auto;
+        flex-direction: column;
+        align-items: start;
+        height: max-content;
+        margin-top: 50px;
+    }
+    .Logo{
+        justify-content: start;
+        width: 100%;
+    }
+    .linhaVerticalLogo{
+        display: none;
+    }
+    .LogoMarca{
+        width: 100%;
+    }
+}
+@media (max-width: 370px){
+    .BoxLogo{
+        width: 80%;
+    }
+    .Logo{
+        font-size: 20pt;
+    }
+}

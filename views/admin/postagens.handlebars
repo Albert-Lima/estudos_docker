@@ -1,0 +1,38 @@
+<header class="BarNav">
+    <div class="menu">
+        <button class="bttMenu">
+            <span class="barra-menu" id="barra1"></span>
+            <span class="barra-menu" id="barra2"></span>
+            <span class="barra-menu" id="barra3"></span>
+        </button>
+        <nav class="NavPage1">
+            <a href="/admin/home" class="NoSelected">Home</a>
+            <a href="/user/sobre" class="NoSelected">Sobre</a>
+            <a href="#" class="NoSelected">Calculadora</a>
+            <a href="/user/logout" class="NoSelected">Logout</a>
+        </nav>
+    </div>
+    <nav class="NavSocial">
+        <a href="#" class="iconSocial"><img src="/css/img/btt-instagram.png" alt="icone instagram"></a>
+        <a href="#" class="iconSocial"><img src="/css/img/icon_facebook.png" alt="icone facebook"></a>
+        <a href="#" class="iconSocial"><img src="/css/img/twitter.png" alt="icone twitter"></a>
+    </nav>
+</header>
+<div class="BoxListPost" style="margin-top: 100px;">
+    <h1 class="TitleGray">postagens:</h1>
+    <a href="/admin/postagens/nova"><button class="buttonSubmit">Nova postagem</button></a>
+</div>
+{{#each postagens}}
+    <div class="boxPostagens">
+        <img src="/{{imagem}}" style="height: 50px; width: 50px;">
+        <h2>{{titulo}}</h2>
+        <small>{{data}}</small>
+        <p>{{conteudo}}</p>
+        <div class="BoxButton-Posts">
+            <a href="/admin/postagens/edit/{{_id}}"><button class="buttonSubmit">Editar</button></a>
+            <a href="/admin/postagens/delete/{{_id}}"><button class="buttonDelete">Deletar</button></a>
+        </div>
+    </div>
+{{else}}
+    <p>nenhuma postagem ainda</p>
+{{/each}}

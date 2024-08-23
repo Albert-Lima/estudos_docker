@@ -1,0 +1,41 @@
+<header class="BarNav">
+    <div class="menu">
+        <button class="bttMenu">
+            <span class="barra-menu" id="barra1"></span>
+            <span class="barra-menu" id="barra2"></span>
+            <span class="barra-menu" id="barra3"></span>
+        </button>
+        <nav class="NavPage1">
+            <a href="/user/home" class="NoSelected">Home</a>
+            <a href="/user/sobre" class="NoSelected">Sobre</a>
+            <a href="#" class="NoSelected">Calculadora</a>
+            <a href="/user/logout" class="NoSelected">Logout</a>
+        </nav>
+    </div>
+    <nav class="NavSocial">
+        <a href="#" class="iconSocial"><img src="/css/img/btt-instagram.png" alt=""></a>
+        <a href="#" class="iconSocial"><img src="/css/img/icon_facebook.png" alt=""></a>
+        <a href="#" class="iconSocial"><img src="/css/img/twitter.png" alt=""></a>
+    </nav>
+</header>
+{{#if error}}
+    <div class="ErrorMSG">
+        {{error}}
+    </div>
+{{else}}
+{{/if}}
+<h2 class="Title" style="margin-top: 100px">Postagens</h2>
+{{#each postagens}}
+    <section class="BoxNotícias">
+        <div class="ImgPost" style="background-image: url('/{{imagem}}');"></div>
+        <div class="PostInfo">
+            <h3>{{titulo}}</h3>
+            <p>{{descricao}}</p>
+        </div>
+        <div class="ButtonBox">
+            <a href="/user/postagem/{{_id}}" class="LinkPostagens"><button class="Button-see-more">ver mais</button></a>
+        </div>
+    </section>
+{{else}}
+    <h4 style="margin-top: 200px;" class="ErrorMSG">nenhuma postagem ainda</h4>
+{{/each}}

@@ -1,0 +1,7 @@
+{{>_navbarglobal}}
+<h2>Categorias:</h2>
+{{#each categorias}}
+    <a href="/categorias/{{slugCategoria}}"><h4>{{nomeCategoria}}</h4></a>
+{{else}}
+    <h4>Nenhuma categoria registrada</h4>
+{{/each}}
