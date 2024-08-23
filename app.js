@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const path = require('path')
 
 //CONFIGURAÇÕES
    //HANDLEBARS
@@ -45,7 +46,7 @@ const app = express()
             next()
          })
    //PUBLIC
-      app.use(express.static('public'))
+      app.use(express.static(path.join(__dirname, 'public')))
 
 //ROTAS
    //USER
