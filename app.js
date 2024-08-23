@@ -63,12 +63,13 @@ const path = require('path')
          require("./modules/postagem")
          const Postagens = mongoose.model("postagens")
          app.get("/", (req, res)=>{
-            Postagens.find().populate().sort({data: "desc"}).lean().then((postagens)=>{
+            res.render("index")
+            /*Postagens.find().populate().sort({data: "desc"}).lean().then((postagens)=>{
                res.render("index", {postagens: postagens})
             }).catch((err)=>{
                req.flash("error_msg", "houve um erro interno")
                res.redirect("/404")
-            })
+            })*/
          })
          app.get("/404", (req, res)=>{
             res.send("erro 404")
